@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situs Pertama Saya</title>
+    <link href="https://FahmiFD.com" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f7f9fc;
+            --text-color: #333;
+            --bg-color: #ffffff;
+            --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: var(--bg-color);
+            box-shadow: var(--shadow-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .main-nav li {
+            margin-left: 25px;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 80px 50px;
+            background-color: var(--secondary-color);
+            border-bottom-left-radius: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            color: var(--primary-color);
+        }
+
+        .hero-image-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image:hover {
+            transform: translateY(-10px);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #387ace;
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            padding-top: 50px;
+        }
+
+        .info-card {
+            background-color: var(--bg-color);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            width: 300px;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .about-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            gap: 20px;
+        }
+        
+        .kontak-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        .kontak-form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .kontak-form-container input, .kontak-form-container textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+        
+        .kontak-form-container textarea {
+            resize: vertical;
+        }
+        
+        .kontak-form-container button.btn {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+
+        .info-card h2 {
+            font-size: 1.5em;
+            padding: 15px 0 5px;
+        }
+
+        .main-footer {
+            text-align: center;
+            padding: 40px;
+            background-color: #333;
+            color: white;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .main-header {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .main-nav {
+                margin-top: 15px;
+            }
+
+            .main-nav li {
+                margin: 0 10px;
+            }
+
+            .hero-section {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-image-container {
+                margin-bottom: 30px;
+            }
+
+            .about-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">Portofolio & Blog</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang Saya</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="beranda" class="hero-section">
+            <div class="hero-text">
+                <h1>Selamat Datang Di portofolio & blog saya</h1>
+                <p>Jelajahi tentang saya and thanks have visit this website.</p>
+                <a href="#tentang" class="btn">Tentang Saya</a>
+            </div>
+            <div class="hero-image-container">
+                <img src="piture14.jpg" alt="Ilustrasi Desain Kreatif" class="hero-image">
+            </div>
+        </section>
+
+        <section id="tentang" class="about-section">
+            <h2 class="section-title">Tentang Saya</h2>
+            <div class="info-card">
+                <img src="picture12.jpg" alt="Gambar Desain" class="about-img">
+                <h2>Website Pertama Saya</h2>
+                <p>Ini adalah website pertama yang saya buat, dan bagi saya sangat keren.</p>
+            </div>
+            <div class="info-card">
+                <img src="picture13.jpg" alt="Gambar Cerita" class="about-img">
+                <h2>Profile Saya</h2>
+                <p>Saya berumur 15 tahun,saya tinggal di bandung, Saya masih pelajar dan saya bersekolah di Smkn Sukasari.</p>
+            </div>
+        </section>
+        
+        <section id="kontak" class="kontak-section">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <p>Silakan kirimkan pesan Anda melalui formulir di bawah ini atau hubungi kami di media sosial.</p>
+            <div class="kontak-form-container">
+                <form>
+                    <input type="text" placeholder="Nama Anda" required>
+                    <input type="email" placeholder="Email Anda" required>
+                    <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+                    <button type="submit" class="btn">Kirim Pesan</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Situs Portofolio & Blog. Semua hak cipta dilindungi.</p>
+        <div class="social-links">
+            <p>Hubungi kami:</p>
+            <a href="#">Email</a> | <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>
